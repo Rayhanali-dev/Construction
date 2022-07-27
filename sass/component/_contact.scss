@@ -1,0 +1,73 @@
+#contact {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: -70px;
+        left: 0;
+        width: 8px;
+        height: 200px;
+        background-color: $buttonhovercolor;
+    }
+    .header {
+        h3 {
+            @include font(54px, 'Poppins', 600, $headingcolor);
+            @include mgap(0px, 30px, 0, 0);
+        }
+        p {
+            @include font(20px, 'Roboto', 400, $paracolor);
+            line-height: 28px;
+            @include mgap(0px, 80px, 0, 0);
+        }
+    }
+    .contact-information {
+        .form-field {
+            position: relative;
+            input {
+                width: 100%;
+                border-radius: 7px;
+                @include pgap(10px, 10px, 10px, 0);
+                background-color: $contactbackgroundcolor;
+                outline: none;
+                @include mgap(0px, 20px, 0, 0);
+                border: none;
+                position: relative;
+                &:focus {
+                    border: 1px solid #F4F4F4;
+                    background-color: #fff;
+                }
+            }
+            textarea {
+                width: 100%;
+                border-radius: 7px;
+                @include pgap(10px, 10px, 10px, 0);
+                background-color: $contactbackgroundcolor;
+                outline: none;
+                @include mgap(0px, 20px, 0, 0);
+                border: none;
+                &:focus {
+                    border: 1px solid #F4F4F4;
+                    background-color: #fff;
+                }
+            }
+        }
+        button {
+            @include pgap(22px, 22px, 0, 0);
+            border: 1px solid $buttonhovercolor;
+            transition: all linear .3s;
+            @include font(17px, 'Poppins', 500, $bantextcolor);
+            width: 214px;
+            text-align: center;
+            border-radius: 5px;
+            border-top-left-radius: 40px;
+            background-color: $contactbackgroundcolor;
+            border-bottom-right-radius: 40px;
+            @include mgap(0, 90px, 0, 15px);
+            &:hover{
+                background-color: $buttonhovercolor;
+                color: $normalcolor;
+                border: 1px solid $buttonhovercolor;
+            }
+        }
+    }
+}

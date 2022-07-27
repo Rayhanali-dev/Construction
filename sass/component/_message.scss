@@ -1,0 +1,39 @@
+#message {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(../images/ceo.png) no-repeat center/cover;
+    padding-top: 175px;
+    padding-bottom: 237px;
+    @include mgap(0, 140px, 0, 0);
+    .message-header {
+        h3 {
+            @include font(54px, 'Poppins', 500, $msgcolor);
+            @include mgap(0, 50px, 0, 0);
+        }
+    }
+    .message-content {
+        position: relative;
+        p {
+            &:first-of-type {
+                @include font(18px, 'Poppins', 400, $msgcolor);
+                line-height: 28px;
+                @include mgap(0px, 60px, 0, 0);
+                @include pgap(0px, 0px, 220px, 220px);
+            }
+            &:last-of-type {
+                @include font(18px, 'Poppins', 400, $msgcolor);
+                line-height: 28px;
+                @include mgap(0px, 60px, 0, 0);
+                @include pgap(0px, 0px, 220px, 220px);
+            }
+        }
+        .q-top {
+            position: absolute;
+            top: -50px;
+            left: 125px;
+        }
+        .q-bottom {
+            position: absolute;
+            bottom: -70px;
+            right: 125px;
+        }
+    }
+}

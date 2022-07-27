@@ -1,0 +1,100 @@
+#banner {
+    @include mgap(30px, 0, 0, 0);
+    .banner-left-content {
+        @include mgap(0, 0, 20px, 0);
+        h1 {
+            @include font(64px, 'Poppins', 700, $headingcolor);
+            line-height: 120%;
+            span {
+                color: $bantextcolor;
+            }
+            @include mgap(0px, 40px, 0px, 0);
+        }
+        p.first-para {
+            @include font(18px, 'Poppins', 400, $paracolor);
+            line-height: 28px;
+            @include pgap(0, 0, 0, 75px);
+            @include mgap(0px, 40px, 0px, 0);
+        }
+        a.explore {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 18px;
+                left: -161px;
+                width: 632px;
+                height: 615px;
+                background: url(../images/ban-vactor.png) no-repeat;
+                z-index: -1;
+            }
+        }
+        a {
+            @include pgap(22px, 22px, 0, 0);
+            border: 1px solid $buttonhovercolor;
+            transition: all linear .3s;
+            &:last-child {
+                @include mgap(0px, 0px, 0px, 0px);
+            }
+            @include font(17px, 'Poppins', 500, $bantextcolor);
+            width: 214px;
+            text-align: center;
+            border-radius: 5px;
+            border-top-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            @include mgap(0, 90px, 0, 15px);
+            &:hover{
+                background-color: $buttonhovercolor;
+                color: $normalcolor;
+                border: 1px solid $buttonhovercolor;
+            }
+        }
+        .ban-count {
+            .ban-counter-heading {
+                position: relative;
+                h3 {
+                    @include font(40px, 'Poppins', 500, $headingcolor);
+                    @include mgap(0, 15px, 0, 0);
+                }
+                .ban-counter-icon {
+                    position: absolute;
+                    top: -17px;
+                    left: -5px;
+                    z-index: -1;
+                }
+            }
+            p {
+                @include font(20px, 'Poppins', 500, $paracolor)
+            }
+            
+        }
+    }
+    .banner-img {
+        position: relative;
+        @include mgap(0px, 0px, 60px, 0);
+        @include pgap(0px, 98px, 0, 0);
+        img {
+            border-bottom-left-radius: 300px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100px;
+            left: -175px;
+            width: 238px;
+            height: 213px;
+            background: url(../images/ban-top-shape.png) no-repeat;
+            z-index: -1;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 238px;
+            height: 213px;
+            background: url(../images/ban-bottom.png) no-repeat;
+            z-index: -1;
+        }
+    }
+}

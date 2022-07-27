@@ -1,0 +1,18 @@
+#sponser {
+    z-index: 1;
+    @include mgap(15px, 140px, 0, 0);
+    .sponser-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        @include pgap(74px, 74px, 0px, 0px);
+        background-color: $sponserbackgroundcolor;
+        border-radius: 150px;
+        .sponser-item {
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+}

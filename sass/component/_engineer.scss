@@ -1,0 +1,118 @@
+#engineer {
+    @include mgap(0px, 140px, 0, 0);
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: -70px;
+        right: 0;
+        width: 8px;
+        height: 200px;
+        background-color: $buttonhovercolor;
+    }
+    .header {
+        h3 {
+            @include font(54px, 'Poppins', 600, $headingcolor);
+            @include mgap(0px, 30px, 0, 0);
+        }
+        p {
+            @include font(20px, 'Roboto', 400, $paracolor);
+            line-height: 28px;
+            @include mgap(0px, 80px, 0, 0);
+        }
+    }
+        .engineer-item {
+            padding-top: 70px;
+            background-color: #fff;
+            box-shadow: 0px 20px 50px rgba(198, 217, 225, 0.3);
+            border-radius: 5px;
+            position: relative;
+            @include mgap(0, 80px, 12px, 12px);
+            .engineer-img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background-color: green;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            a {
+                &:first-of-type {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    color: #F0BB00;
+                    font-size: 24px;
+                }
+                &:nth-of-type(2) {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    color: $headingcolor;
+                    font-size: 24px;
+                }
+                &:nth-of-type(3) {
+                    @include font(18px, 'Poppins', 500, $paracolor);
+                    display: block;
+                }
+                &:nth-of-type(4) {
+                    @include font(17px, 'Poppins', 500, $bantextcolor);
+                    display: block;
+                    padding-bottom: 60px;
+                }
+            }
+            h3 {
+                @include mgap(20px, 7px, 0, 0);
+                @include font(24px, 'Poppins', 500, $headingcolor);
+            }
+            p {
+                @include mgap(0, 45px, 0, 0);
+                @include font(12px, 'Poppins', 500, $paracolor);
+            }
+        }
+    .arrows {
+        background-color: #fff;
+        width: 120px;
+        display: flex;
+        border-radius: 65px;
+        justify-content: space-around;
+        @include pgap(5px, 5px, 0, 0);
+        box-shadow: 0px 20px 50px rgba(198, 217, 225, 0.3);
+        .arrows-left {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            i {
+                line-height: 50px;
+                color: #000;
+            }
+            &:hover {
+                background-color: $buttonhovercolor;
+                i {
+                    color: #fff;
+                }
+            }
+        }
+        .arrows-right {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            i {
+                line-height: 50px;
+                color: #000;
+            }
+            &:hover {
+                background-color: $buttonhovercolor;
+                i {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

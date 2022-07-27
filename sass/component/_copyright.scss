@@ -1,0 +1,36 @@
+#copyright {
+    @include pgap(40px, 40px, 0, 0);
+    .copyright-text {
+        p {
+            @include font(14px, 'Poppins', 400, $paracolor);
+        }
+    }
+}
+
+.sticky-menu {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #18A7B9;
+    animation: sticky 1s linear;
+}
+
+@keyframes sticky {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.sticky-menu.navbar .navbar-brand {
+    color: #fff;
+}
+
+.sticky-menu.navbar .nav-item .nav-link {
+    color: #fff;
+}

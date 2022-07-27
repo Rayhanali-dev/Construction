@@ -1,0 +1,102 @@
+.navbar {
+    // background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 99;
+    @include pgap(40px, 40px, 0, 0);
+    .navbar-brand {
+        @include font(25px, 'Poppins', 600, $bantextcolor);
+    }
+    .nav-item {
+        @include pgap(0, 0, 17px, 17px);
+        .nav-link {
+            padding-left: 0;
+            padding-right: 0;
+            transition: all linear .3s;
+            @include font(18px, 'Poppins', 400, $headingcolor);
+            position: relative;
+            &::before{
+                position: absolute;
+                content: '';
+                font-weight: 600;
+                height: 1px;
+                color: transparent;
+                overflow: hidden;
+                visibility: hidden;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 3px;
+                width: 3px;
+                background-color: #000;
+                opacity: 0;
+                transition: all linear .3s;
+            }
+
+            &:hover {
+                text-shadow: 1px 0px 0px currentColor;
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .bars {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        .line {
+            width: 40px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 5px;
+            transition: all linear .3s;
+        }
+        .line-one {
+            &.baka-1 {
+                transform: rotate(45deg) translate(8px, 7px);
+            }
+        }
+        .line-two {
+            &.baka-2 {
+                opacity: 0;
+                margin-left: -20px;
+            }
+        }
+        .line-three {
+            &.baka-3 {
+                transform: rotate(-45deg) translate(4px,-3px);
+            }
+        }
+    }
+    #mobile-menu {
+        background-color: rgb(21, 103, 225);
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60vw;
+        height: 100vh;
+        padding-top: 20px;
+        transition: all linear .3s;
+        .nav-item {
+            .nav-link {
+                color: #fff;
+            }
+        }
+        &.slide-menu {
+            left: 0;
+        }
+    }
+    
+}
